@@ -21,7 +21,14 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card-header">
-                            All Categories
+                            <div class="row">
+                                <div class="col-md-6">
+                                    All Categories                                    
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="{{route('admin.category.add')}}" class="btn btn-success float-end">Add New Category</a>
+                                </div>
+                            </div>
                         </div>
                         <div class="card-body">
                             <table class="table table-striped">
@@ -35,11 +42,11 @@
                                 </thead>
                                 <tbody>
                                     @php
-                                        $i=1;
+                                        $i=($categories->currentPage()-1)*$categories->perPage();
                                     @endphp
                                     @foreach($categories as $category)
                                         <tr>
-                                            <td>{{$i++}}</td>
+                                            <td>{{++$i}}</td>
                                             <td>{{$category->name}}</td>
                                             <td>{{$category->slug}}</td>
                                             <td></td>
