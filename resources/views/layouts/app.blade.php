@@ -34,7 +34,7 @@
                                         <li><a href="#"><img src="assets/imgs/theme/flag-dt.png" alt="">Deutsch</a></li>
                                         <li><a href="#"><img src="assets/imgs/theme/flag-ru.png" alt="">Pусский</a></li>
                                     </ul>
-                                </li>                                
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -52,7 +52,7 @@
                     <div class="col-xl-3 col-lg-4">
                         <div class="header-info header-info-right">
                             @auth
-                                <ul>                                
+                                <ul>
                                     <li><i class="fi-rs-user"></i>{{Auth::user()->name}}  / <form method="POST" action="{{route('logout')}}">
                                         @csrf
                                         <a href="{{route('logout')}}" onclick="event.preventDefault(); this.closest('form').submit();">Logout</a>
@@ -60,10 +60,10 @@
                                     </li>
                                 </ul>
                             @else
-                                <ul>                                
+                                <ul>
                                     <li><i class="fi-rs-key"></i><a href="{{route('login')}}">Log In </a>  / <a href="{{route('register')}}">Sign Up </a></li>
                                 </ul>
-                            @endif    
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -338,24 +338,24 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li><a href="blog.html">Blog </a></li>                                    
+                                    <li><a href="blog.html">Blog </a></li>
                                     <li><a href="contact.html">Contact</a></li>
                                     @auth
-                                        <li><a href="#">My Account<i class="fi-rs-angle-down"></i></a>                                     
+                                        <li><a href="#">My Account<i class="fi-rs-angle-down"></i></a>
                                             @if(Auth::user()->utype=='ADM')
                                                 <ul class="sub-menu">
                                                     <li><a href="{{route('admin.dashboard')}}">Dashboard</a></li>
-                                                    <li><a href="#">Products</a></li>
+                                                    <li><a href="{{route('admin.products')}}">Products</a></li>
                                                     <li><a href="{{route('admin.categories')}}">Categories</a></li>
                                                     <li><a href="#">Coupons</a></li>
                                                     <li><a href="#">Orders</a></li>
                                                     <li><a href="#">Customers</a></li>
-                                                                                       
+
                                                 </ul>
                                             @else
                                                 <ul class="sub-menu">
                                                     <li><a href="{{route('user.dashboard')}}">Dashboard</a></li>
-                                                    
+
                                                 </ul>
                                             @endif
                                         </li>
@@ -522,9 +522,9 @@
                         <a href="contact.html"> Our location </a>
                     </div>
                     <div class="single-mobile-header-info">
-                        <a href="login.html">Log In </a>                        
+                        <a href="login.html">Log In </a>
                     </div>
-                    <div class="single-mobile-header-info">                        
+                    <div class="single-mobile-header-info">
                         <a href="register.html">Sign Up</a>
                     </div>
                     <div class="single-mobile-header-info">
@@ -541,7 +541,7 @@
                 </div>
             </div>
         </div>
-    </div>        
+    </div>
    {{$slot}}
 
     <footer class="main">
@@ -605,7 +605,7 @@
                             <li><a href="#">Delivery Information</a></li>
                             <li><a href="#">Privacy Policy</a></li>
                             <li><a href="#">Terms &amp; Conditions</a></li>
-                            <li><a href="#">Contact Us</a></li>                            
+                            <li><a href="#">Contact Us</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-2  col-md-3">
@@ -614,7 +614,7 @@
                             <li><a href="my-account.html">My Account</a></li>
                             <li><a href="#">View Cart</a></li>
                             <li><a href="#">My Wishlist</a></li>
-                            <li><a href="#">Track My Order</a></li>                            
+                            <li><a href="#">Track My Order</a></li>
                             <li><a href="#">Order</a></li>
                         </ul>
                     </div>
@@ -654,7 +654,7 @@
                 </div>
             </div>
         </div>
-    </footer>    
+    </footer>
     <!-- Vendor JS-->
 <script src="{{asset('assets/js/vendor/modernizr-3.6.0.min.js')}}"></script>
 <script src="{{asset('assets/js/vendor/jquery-3.6.0.min.js')}}"></script>
