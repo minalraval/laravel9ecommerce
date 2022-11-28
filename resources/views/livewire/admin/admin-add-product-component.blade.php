@@ -112,9 +112,9 @@
                                 <div class="mb-3 mt-3">
                                     <label for="image" class="form-label">Image</label>
                                     <input type="file" name="image" class="form-control" wire:model="image"/>
-                                    {{-- @if ('image')
+                                    @if ($image)
                                         <img src="{{$image->temporaryUrl()}}" width="120" alt=""/>
-                                    @endif --}}
+                                    @endif
                                     @error('image')
                                         <p class="text-danger">{{$message}}</p>
                                     @enderror
