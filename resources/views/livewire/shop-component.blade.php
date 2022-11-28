@@ -13,7 +13,7 @@
         }
         .wishlisted i{
             color: #fff !important;
-        
+
         }
     </style>
 <main class="main">
@@ -67,14 +67,14 @@
                                             <li><a class="{{$orderBy=='Price: Low to High' ? 'active' : ''}}" href="#" wire:click.prevent="changeOrderBy('Price: Low to High')">Price: Low to High</a></li>
                                             <li><a class="{{$orderBy=='Price: High to Low' ? 'active' : ''}}" href="#" wire:click.prevent="changeOrderBy('Price: High to Low')">Price: High to Low</a></li>
                                             <li><a class="{{$orderBy=='Sort By Newness' ? 'active' : ''}}" href="#" wire:click.prevent="changeOrderBy('Sort By Newness')">Sort By Newness</a></li>
-                                        
+
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="row product-grid-3">
-                        @php 
+                        @php
                             $witems=Cart::instance('wishlist')->content()->pluck('id');
                         @endphp
                         @foreach($products as $product)
@@ -83,7 +83,7 @@
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
                                             <a href="{{route('product.details',['slug'=>$product->slug])}}">
-                                                <img class="default-img" src="{{asset('assets/imgs/shop/product-')}}{{$product->id}}-1.jpg" alt="{{$product->name}}">
+                                                <img class="default-img" src="{{asset('assets/imgs/products')}}/{{$product->image}}" alt="{{$product->name}}">
                                                 <img class="hover-img" src="{{asset('assets/imgs/shop/product-')}}{{$product->id}}-2.jpg" alt="{{$product->name}}">
                                             </a>
                                         </div>
@@ -144,14 +144,14 @@
                             <div class="col-lg-12 col-mg-6"></div>
                             <div class="col-lg-12 col-mg-6"></div>
                         </div>
-                       
+
                         <div class="widget-category mb-30">
                             <h5 class="section-title style-1 mb-30 wow fadeIn animated">Category</h5>
                             <ul class="categories">
                                 @foreach($categories as $category)
                                     <li><a href="{{route('product.category',['slug'=>$category->slug])}}">{{$category->name}}</a></li>
                                 @endforeach
-                                
+
                             </ul>
                         </div>
                         <!-- Fillter By Price -->
@@ -272,6 +272,6 @@
                     @this.set('max_value',ui.values[1]);
                 }
             });
-        }); 
+        });
     </script>
 @endpush

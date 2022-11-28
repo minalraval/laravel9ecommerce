@@ -21,7 +21,7 @@
                                         <!-- MAIN SLIDES -->
                                         <div class="product-image-slider">
                                             <figure class="border-radius-10">
-                                                <img src="{{asset('assets/imgs/shop/product-')}}{{$product->id}}-2.jpg" alt="{{$product->name}}">
+                                                <img src="{{asset('assets/imgs/products')}}/{{$product->image}}" alt="{{$product->name}}">
                                             </figure>
                                             <figure class="border-radius-10">
                                                 <img src="{{asset('assets/imgs/shop/product-16-1.jpg')}}" alt="product image">
@@ -427,7 +427,7 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="row related-products">
-                                       
+
                                     @foreach($rproducts as $rproduct)
                                         <div class="col-lg-3 col-md-4 col-12 col-sm-6">
                                             <div class="product-cart-wrap small hover-up">
@@ -460,10 +460,10 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    @endforeach 
+                                    @endforeach
                                     </div>
                                 </div>
-                            </div>                            
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-3 primary-sidebar sticky-sidebar">
@@ -542,8 +542,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            @endforeach    
-                        </div>                        
+                            @endforeach
+                        </div>
                     </div>
                 </div>
             </div>

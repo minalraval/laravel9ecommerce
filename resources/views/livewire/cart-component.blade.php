@@ -32,10 +32,10 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    
+
                                         @foreach(Cart::instance('cart')->content() as $item)
                                             <tr>
-                                                <td class="image product-thumbnail"><img src="{{asset('assets/imgs/shop/product-')}}{{$item->model->id}}-1.jpg" alt="#"></td>
+                                                <td class="image product-thumbnail"><img src="{{asset('assets/imgs/products')}}/{{$product->image}}" alt="#"></td>
                                                 <td class="product-des product-name">
                                                     <h5 class="product-name"><a href="{{route('product.details',['slug'=>$item->model->slug])}}">{{$item->model->name}}</a></h5>
                                                    {{-- <p class="font-xs">Maboriosam in a tonto nesciung eget<br> distingy magndapibus.
@@ -55,7 +55,7 @@
                                                 <td class="action" data-title="Remove"><a href="#" class="text-muted" wire:click.prevent="destroy('{{$item->rowId}}')"><i class="fi-rs-trash"></i></a></td>
                                             </tr>
                                         @endforeach
-                                    
+
                                     <tr>
                                         <td colspan="6" class="text-end">
                                             <a href="#" class="text-muted" wire:click.prevent="clearAll()"> <i class="fi-rs-cross-small"></i> Clear Cart</a>
